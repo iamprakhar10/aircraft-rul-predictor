@@ -1,0 +1,80 @@
+{
+    "dataset": "C-MAPSS FD004",
+    "target": {
+        "name": "remaining useful life",
+        "cap": 125
+    },
+    "model": {
+        "name": "safety-aware LSTM",
+        "input_size": 27,
+        "hidden_size": 64,
+        "num_layers": 1,
+        "window": 30
+    },
+    "loss": {
+        "name": "safety_aware_asymmetric_mse",
+        "overprediction_weight": 2.0,
+        "critical_rul": 30.0,
+        "critical_overprediction_weight": 5.0
+    },
+    "training": {
+        "seed": 42,
+        "epochs": 8,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    "official_test_overall": {
+        "mae": 10.486841201782227,
+        "mse": 224.73544311523438,
+        "rmse": 14.991178843414362
+    },
+    "official_test_critical_region": {
+        "critical_rul_threshold": 30,
+        "sequence_count": 53,
+        "mae": 3.847743272781372,
+        "rmse": 4.983574590722401,
+        "mean_error": 1.5341227054595947,
+        "overprediction_rate": 0.7169811320754716,
+        "mean_overprediction": 3.753143787384033,
+        "maximum_overprediction": 12.960765838623047,
+        "severe_overprediction_rate": 0.018867924528301886
+    },
+    "official_test_rul_ranges": [
+        {
+            "rul_range": "0-30",
+            "sequence_count": 53,
+            "mae": 3.847743272781372,
+            "rmse": 4.983574590722401,
+            "mean_error": 1.5341227054595947,
+            "overprediction_rate": 0.7169811320754716,
+            "severe_overprediction_rate": 0.018867924528301886
+        },
+        {
+            "rul_range": "31-60",
+            "sequence_count": 38,
+            "mae": 8.90356159210205,
+            "rmse": 12.004192255785776,
+            "mean_error": 0.038200076669454575,
+            "overprediction_rate": 0.39473684210526316,
+            "severe_overprediction_rate": 0.18421052631578946
+        },
+        {
+            "rul_range": "61-90",
+            "sequence_count": 40,
+            "mae": 14.233423233032227,
+            "rmse": 18.074667452421497,
+            "mean_error": 4.244744300842285,
+            "overprediction_rate": 0.575,
+            "severe_overprediction_rate": 0.35
+        },
+        {
+            "rul_range": "91-125",
+            "sequence_count": 117,
+            "mae": 12.727638244628906,
+            "rmse": 17.51056199823811,
+            "mean_error": -9.314000129699707,
+            "overprediction_rate": 0.1794871794871795,
+            "severe_overprediction_rate": 0.07692307692307693
+        }
+    ]
+}
