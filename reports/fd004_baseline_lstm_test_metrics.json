@@ -1,0 +1,64 @@
+{
+    "model": {
+        "name": "baseline asymmetric LSTM",
+        "window": 30,
+        "hidden_size": 64,
+        "num_layers": 1,
+        "overprediction_weight": 2.0,
+        "training_epochs": 8
+    },
+    "official_test_overall": {
+        "mae": 11.047420501708984,
+        "mse": 238.78704833984375,
+        "rmse": 15.452735949981276
+    },
+    "official_test_critical_region": {
+        "critical_rul_threshold": 30,
+        "sequence_count": 53,
+        "mae": 5.392929553985596,
+        "rmse": 6.595952104698795,
+        "mean_error": 3.8495137691497803,
+        "overprediction_rate": 0.7547169811320755,
+        "mean_overprediction": 6.123117923736572,
+        "maximum_overprediction": 15.858783721923828,
+        "severe_overprediction_rate": 0.1509433962264151
+    },
+    "official_test_rul_ranges": [
+        {
+            "rul_range": "0-30",
+            "sequence_count": 53,
+            "mae": 5.392929553985596,
+            "rmse": 6.595952104698795,
+            "mean_error": 3.8495137691497803,
+            "overprediction_rate": 0.7547169811320755,
+            "severe_overprediction_rate": 0.1509433962264151
+        },
+        {
+            "rul_range": "31-60",
+            "sequence_count": 38,
+            "mae": 8.991215705871582,
+            "rmse": 12.599076349221622,
+            "mean_error": 1.4853277206420898,
+            "overprediction_rate": 0.5,
+            "severe_overprediction_rate": 0.21052631578947367
+        },
+        {
+            "rul_range": "61-90",
+            "sequence_count": 40,
+            "mae": 13.318689346313477,
+            "rmse": 17.397549055391842,
+            "mean_error": 4.2549920082092285,
+            "overprediction_rate": 0.625,
+            "severe_overprediction_rate": 0.25
+        },
+        {
+            "rul_range": "91-125",
+            "sequence_count": 117,
+            "mae": 13.500184059143066,
+            "rmse": 18.204525663654955,
+            "mean_error": -10.662528991699219,
+            "overprediction_rate": 0.15384615384615385,
+            "severe_overprediction_rate": 0.05982905982905983
+        }
+    ]
+}
