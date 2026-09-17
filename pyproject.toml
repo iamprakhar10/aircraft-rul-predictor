@@ -1,7 +1,7 @@
 [project]
 name = "aircraft-rul-predictor"
 version = "0.1.0"
-description = "Condition-aware LSTM pipeline for remaining-useful-life prediction on NASA C-MAPSS turbofan data"
+description = "Safety-aware LSTM pipeline for remaining-useful-life prediction on NASA C-MAPSS turbofan data"
 readme = "README.md"
 authors = [
     { name = "Prakhar Singh", email = "prakhars156@gmail.com" }
