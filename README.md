@@ -17,13 +17,13 @@ There are multiple modules(parts) present in a turbo jet engine, we know that da
 
 The training data is generated(not by us) by degrading cerain parts of certain modules(for ) exponentially and then waiting till any one of the part degrades below a threshold.
 
-
+```text
 ┌──────────────────────────────┐
-│ Exponential Module Degradation│
+│Exponential Module Degradation│
 └──────────┬───────────────────┘
            ↓
 ┌──────────────────────────────┐
-│       SIMULATOR
+│       SIMULATOR              │
 └──────────┬───────────────────┘
            ↓
 ┌──────────────────────────────┐
@@ -32,7 +32,7 @@ The training data is generated(not by us) by degrading cerain parts of certain m
            ↓
 
 We are given sensor readings till failure as training data
-
+```
 
 ## Main engineering decisions/work
 
