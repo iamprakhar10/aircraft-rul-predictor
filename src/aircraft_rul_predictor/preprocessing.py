@@ -92,6 +92,8 @@ class FD004Preprocessor:
     ) -> FD004Preprocessor:
         """
         Load fitted preprocessing artifacts from a joblib file.
+
+        Alternative way of constructing object of class
         """
         artifacts = joblib.load(
             Path(path)

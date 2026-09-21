@@ -41,6 +41,9 @@ class RULPredictor(nn.Module):
             num_layers=num_layers,
             batch_first=True,
         )
+        # batch_first=True tells PyTorch that tensor dimensions are ordered as:
+        # (batch, timesteps, features)
+
 
         self.output_layer = nn.Linear(
             hidden_size,
