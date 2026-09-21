@@ -41,9 +41,9 @@ We are given sensor readings till failure as training data
 - Discovered six operating conditions from the three operational settings using KMeans(for FD004 data).
 - Scaled the sensor readings according to their operating conditions
 - Used one-hot encoding for operating conditions.
-- Penalize RUL overprediction more heavily, especially when actual RUL is at most 30 cycles. Because we don't want the maintainance to be delayed at lower RUL as that could lead to fatal accident
+- Penalized RUL overprediction more heavily, especially when actual RUL is at most 30 cycles. Because we don't want the maintainance to be delayed at lower RUL as that could lead to fatal accidents.
 - Verified the loss improvement across five paired random-seed experiments.
-- Select the model using validation data before evaluating the official test set.
+- Selected the model using validation data before evaluating the official test set.
 
 ## Final model
 
