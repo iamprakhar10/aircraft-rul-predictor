@@ -192,7 +192,7 @@ The repository records:
 
 ## Limitations
 
-- The data is obtained from simulation, obtaining real data will be Extremely costly or impossible fro us.
-- RUL above 125 cycles is intentionally collapsed into one target value, our focus is to predict RUL for timely maintainance, not to predict the exact RUL remaining for a completely healthy engines.
+- The data is obtained from simulation, obtaining real data will be EXTREMELY costly or impossible for us.
+- RUL above 125 cycles is intentionally collapsed into one target value, our focus is to predict RUL for timely maintainance, not to predict the exact RUL remaining for a completely healthy engine.
 - Operating conditions are approximated using KMeans.
-- The model does not quantify predictive uncertainty.
+- The model does not tell uncertainty about it's perdiction.
